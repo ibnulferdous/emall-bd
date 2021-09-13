@@ -5,7 +5,6 @@ body {
 }
 
 
-
 /* Utility Classes */
 .bg-green {
   background-color: #16C9B8;
@@ -27,18 +26,6 @@ body {
   border-color: #11b3aa;
 }
 
-.btn-outline-green {
-  background-color: #ffffff;
-  color: #11b3aa;
-  border-color: #16C9B8;
-}
-
-.btn-outline-green:hover {
-  background-color: #11b3aa;
-  color: #ffffff;
-  border-color: #11b3aa;
-}
-
 .btn-green:focus {
     box-shadow: 0 0 0 0.25rem rgba(22, 201, 183, 0.158);
 }
@@ -54,7 +41,6 @@ body {
   max-width: 60px;
   display: inline-block;
 }
-
 
 
 /* Search Field */
@@ -93,6 +79,36 @@ body {
   height: 150px;
 }
 
+.stars-outer {
+  position: relative;
+  display: inline-block;
+}
+
+.stars-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+.stars-outer::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #cccccc;
+}
+
+.stars-inner::before {
+  content: "\f005 \f005 \f005 \f005 \f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #f8ce0b;
+}
+
+
+/* Cart Box */
 .cart-main {
   position: relative;
 }
@@ -107,12 +123,14 @@ body {
   top: 10%;
 }
 
+
+/* Footer */
 footer {
   background: #063631;
 }
 
 
-
+/* Media Query */
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
@@ -120,7 +138,6 @@ footer {
   }
   .cart {
     width: 300px;
-    /* border: 1px solid green; */
     padding: 10px;
     box-shadow: 10px 10px 20px gray;
     border-radius: 5px;
@@ -131,6 +148,7 @@ footer {
     padding-right: 10px;
   }
 }
+
 @media only screen and (max-width: 468px) {
   #all-products {
     display: grid;
