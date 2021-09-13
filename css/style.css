@@ -1,6 +1,8 @@
 body {
+  width: 100%;
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   color: #333333;
 }
 
@@ -132,20 +134,20 @@ footer {
 
 /* Media Query */
 @media only screen and (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+
+  .form-control, .btn  {
+    font-size: 12px;
+  }
+
   #all-products {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
   .cart {
-    width: 300px;
-    padding: 10px;
-    box-shadow: 10px 10px 20px gray;
-    border-radius: 5px;
-    margin-right: 30px;
-    position: fixed;
-  }
-  .cart-main {
-    padding-right: 10px;
+    position: static;
   }
 }
 

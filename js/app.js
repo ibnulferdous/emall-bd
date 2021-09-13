@@ -21,7 +21,7 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     div.classList.add("product", "h-100");
     div.innerHTML = `
-      <div class="single-product h-100 px-3 py-4 d-flex flex-column justify-content-between">
+      <div class="single-product h-100 px-2 py-4 d-flex flex-column justify-content-between">
         <div>
           <div class="pb-5">
             <img class="product-image" src="${image}"></img>
