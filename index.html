@@ -5,37 +5,69 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>eMall- Mall on Doorstep</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <title>eMall- Virtual Mall on Doorstep</title>
+  <link rel="shortcut icon" href="images/emall-logo.svg" type="image/x-icon">
+
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
-  <header></header>
-  <main class="main">
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
-      </div>
+  <!-- Top bar starts -->
+  <div class="bg-green">
+    <div class="container d-flex justify-content-between">
+      <h6 class="text-white my-2">Best deals on the internet!</h6>
+      <h6 class="text-white my-2">Call: +08 070 448866</h6>
     </div>
-    <div class="row">
-      <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
+  </div>
+  <!-- Top bar ends -->
+
+  <!-- Logo part starts -->
+  <header class="container">
+    <div class="row mt-3 mb-5">
+      <a class="d-flex justify-content-center justify-content-md-start align-items-center logo">
+        <img src="images/emall-logo.svg" alt="eMall Logo" class="logo-img me-4">
+        <span class="display-5 text-green">eMall</span>
+      </a>
+    </div>
+  </header>
+  <!-- Logo part starts -->
+
+  <!-- Search and products part starts -->
+  <main class="main container">
+    <!-- Search Part starts -->
+    <div class="row mb-5">
+      <div class="col-md-6 offset-md-3 pb-md-5">
+        <div class="input-group">
+          <input id="input-field" class="form-control" type="text" placeholder="Search Products..."/>
+          <button type="button" class="btn btn-green" data-toggle="button" aria-pressed="false"
+            autocomplete="off" id="search-btn" onclick="loadProducts()">
+            Search
+          </button>
         </div>
       </div>
+    </div>
+    <!-- Search Part ends -->
+
+
+    <div class="row">
+      <div class="col-md-9 col-lg-9 col-sm-7">
+        <!-- Products container start -->
+        <div id="all-products" class="mb-md-5">
+        </div>
+        <!-- Products container ends -->
+
+      </div>
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
-        <div class="cart" id="my-cart">
+        <div class="cart px-4 py-5" id="my-cart">
           <table class="table">
             <thead>
               <h1>My-Cart</h1>
@@ -79,13 +111,20 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn btn-green text-center">Buy Now</button>
           </div>
         </div>
       </div>
     </div>
   </main>
-  <footer></footer>
+  <!-- Search and products part starts -->
+
+  <footer class="mt-5">
+    <p class="text-white text-center py-4 mb-0">Copyright &copy; 2021 by eMall</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
   <!-- add javascript  file  -->
   <script src="./js/app.js"></script>
