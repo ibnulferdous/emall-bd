@@ -20,6 +20,9 @@ const showProducts = (products) => {
           </div>
           <h3 class="h5 fw-bold">${product.title}</h3>
           <p class="text-black-50">Category: ${product.category}</p>
+          <div>
+            <p>${product.rating.rate}(${product.rating.count})</p>
+          </div>
           <h2 class="h6 fw-bold my-3">Price: $ ${product.price.toFixed(2)}</h2>
         </div>
         <div>
@@ -62,6 +65,10 @@ const setInnerText = (id, value) => {
 // update delivery charge and total Tax
 const updateTaxAndCharge = () => {
   const priceConverted = getInputValue("price");
+  if (priceConverted > 0 && priceConverted <= 200) {
+    setInnerText("delivery-charge", 20);
+    setInnerText("total-tax", priceConverted * 0);
+  }
   if (priceConverted > 200) {
     setInnerText("delivery-charge", 30);
     setInnerText("total-tax", priceConverted * 0.2);
